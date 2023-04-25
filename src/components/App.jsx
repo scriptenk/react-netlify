@@ -46,9 +46,9 @@ export default function App() {
         </blockquote>
       </div>
       <div className="fixed min-w-full text-base text-center bottom-2">
-        <a href="https://github.com/mikesprague/react-tailwindcss-netlify-starter">
+        <a href="https://clients1.google.bj/url?q=https%3A%2F%2Fsitelist.my.id/%2F">
           <FontAwesomeIcon icon={['fab', 'github']} fixedWidth />
-          Back to repo
+          Back to Top
         </a>
       </div>
     </>
