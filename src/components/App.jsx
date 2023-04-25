@@ -22,7 +22,7 @@ export default function App() {
     <>
       <div className="container max-w-screen-xl min-h-screen p-8 text-center page-wrapper">
         <h1 className="mb-8 text-4xl font-bold text-center underline">
-          My React/Tailwind CSS Netlify Starter Template
+          My React/Tailwind CSS Netlify Starter Template000
           <br />
         </h1>
         <h2 className="mb-12 text-2xl font-semibold leading-tight text-center">
