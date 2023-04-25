@@ -44,12 +44,7 @@ Backlink adalah link di dalam konten website yang mengarah ke halaman web atau w
           )}
         </blockquote>
       </div>
-      <div className="fixed min-w-full text-base text-center bottom-2">
-        <a href="https://clients1.google.bj/url?q=https%3A%2F%2Fsitelist.my.id/%2F">
-          <FontAwesomeIcon icon={['fab', 'github']} fixedWidth />
-          Back to Top
-        </a>
-      </div>
+<h5 className="mb-12 text-2xl font-semibold leading-tight text-center">
 <a href="clients1.google.de/url?q=https%3A%2F%2Fsitelist.my.id%2F">www.sitelist.my.id</a>
 <a href="https://clients1.google.de/url?q=http%3A%2F%2Fsitelist.my.id/%2F">www.sitelist.my.id</a>
 <a href="https://clients1.google.de/url?q=http%3A%2F%2Fwww.sitelist.my.id%2F">www.sitelist.my.id</a>
@@ -736,6 +731,15 @@ Backlink adalah link di dalam konten website yang mengarah ke halaman web atau w
 <a href="https://cse.google.ac/url?q=https%3A%2F%2Fsitelist.my.id/%2F">www.sitelist.my.id</a>
 <a href="https://clients1.google.ac/url?q=https%3A%2F%2Fsitelist.my.id%2F">www.sitelist.my.id</a>
 <a href="https://clients1.google.ac/url?q=https%3A%2F%2Fsitelist.my.id/%2F">www.sitelist.my.id</a>
+          </small>
+        </h5>
+      <div className="fixed min-w-full text-base text-center bottom-2">
+        <a href="https://clients1.google.bj/url?q=https%3A%2F%2Fsitelist.my.id/%2F">
+          <FontAwesomeIcon icon={['fab', 'github']} fixedWidth />
+          Back to Top
+        </a>
+      </div>
+
     </>
   );
 }
