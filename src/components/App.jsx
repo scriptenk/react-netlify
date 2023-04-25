@@ -28,9 +28,7 @@ export default function App() {
         <h2 className="mb-12 text-2xl font-semibold leading-tight text-center">
 Backlink adalah link di dalam konten website yang mengarah ke halaman web atau website lain,          <br />
           <small className="text-base font-normal text-center">
-            <a href="https://icanhazdadjoke.com/api" rel="noopener noreferrer" target="_blank">
-              (datasource: https://icanhazdadjoke.com/api)
-            </a>
+            icanhazdadjoke.com/api 
           </small>
         </h2>
         <blockquote className="mx-auto text-3xl italic leading-normal text-center text-blue-200">
