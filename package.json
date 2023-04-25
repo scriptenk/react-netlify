@@ -1,0 +1,180 @@
+{
+  "name": "react-tailwindcss-netlify-starter",
+  "version": "0.1.0",
+  "description": "My project template for a barebones React/Tailwind CSS PWA front-end hosted on Netlify with an example Netlify function that can be used on the back-end",
+  "private": true,
+  "engines": {
+    "node": ">= 16.x",
+    "npm": ">= 8.x"
+  },
+  "scripts": {
+    "build": "vite build && npm run lambda:build",
+    "clean": "rm -rf ./build && rm -rf ./lambda",
+    "dev": "vite serve --port 3000",
+    "lambda:build": "netlify-lambda build ./src/functions",
+    "lambda:serve": "netlify-lambda serve ./src/functions --config ./functions.config.js",
+    "prebuild": "npm run clean",
+    "preview": "vite preview",
+    "start": "concurrently 'npm run dev' 'npm run lambda:serve' --names '📦,💻' --prefix '[{name}] ' --kill-others",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "repository": {
+    "url": "https://github.com/mikesprague/react-tailwindcss-netlify-starter"
+  },
+  "author": {
+    "name": "Michael Sprague",
+    "email": "mikesprague@gmail.com"
+  },
+  "homepage": "",
+  "license": "MIT",
+  "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^6.4.0",
+    "@fortawesome/free-brands-svg-icons": "^6.4.0",
+    "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "@fortawesome/react-fontawesome": "^0.2.0",
+    "@tailwindcss/typography": "^0.5.9",
+    "@tippyjs/react": "^4.2.6",
+    "axios": "1.3.6",
+    "cross-env": "^7.0.3",
+    "dayjs": "^1.11.7",
+    "he": "^1.2.0",
+    "nanoid": "^4.0.2",
+    "prop-types": "^15.8.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
+    "@babel/eslint-parser": "7.21.3",
+    "@babel/eslint-plugin": "7.19.1",
+    "@babel/preset-env": "7.21.4",
+    "@fullhuman/postcss-purgecss": "5.0.0",
+    "@tailwindcss/typography": "0.5.9",
+    "@vitejs/plugin-react-swc": "3.3.0",
+    "autoprefixer": "10.4.14",
+    "babel-plugin-add-react-displayname": "0.0.5",
+    "concurrently": "^8.0.1",
+    "cssnano": "^6.0.0",
+    "cz-git": "^1.6.1",
+    "dotenv": "^16.0.3",
+    "eslint": "^8.39.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.8.0",
+    "eslint-config-stylelint": "18.0.0",
+    "eslint-plugin-compat": "^4.1.4",
+    "eslint-plugin-html": "^7.1.0",
+    "eslint-plugin-import": "^2.27.5",
+    "eslint-plugin-jsx-a11y": "^6.7.1",
+    "eslint-plugin-markdown": "^3.0.0",
+    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-react": "^7.32.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-security": "^1.7.1",
+    "netlify-cli": "^14.3.0",
+    "netlify-lambda": "^2.0.16",
+    "postcss": "^8.4.23",
+    "postcss-cli": "^10.1.0",
+    "prettier": "^2.8.8",
+    "prettier-eslint": "^15.0.1",
+    "sass": "^1.62.0",
+    "stylelint": "^14.16.1",
+    "stylelint-config-prettier": "9.0.5",
+    "stylelint-config-prettier-scss": "0.0.1",
+    "stylelint-config-standard": "29.0.0",
+    "stylelint-config-standard-scss": "6.1.0",
+    "stylelint-prettier": "3.0.0",
+    "tailwindcss": "^3.3.1",
+    "vite": "4.3.2",
+    "vite-plugin-html": "3.2.0",
+    "vite-plugin-pwa": "0.14.7"
+  },
+  "babel": {
+    "plugins": [
+      "add-react-displayname"
+    ],
+    "presets": [
+      "@babel/preset-env"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es6": true,
+      "commonjs": true,
+      "node": true
+    },
+    "settings": {
+      "jest": {
+        "version": 28
+      }
+    },
+    "extends": [
+      "airbnb",
+      "plugin:react/recommended",
+      "plugin:react-hooks/recommended",
+      "plugin:jsx-a11y/recommended",
+      "prettier",
+      "stylelint"
+    ],
+    "plugins": [
+      "compat",
+      "html",
+      "import",
+      "jsx-a11y",
+      "markdown",
+      "prettier",
+      "react",
+      "react-hooks",
+      "security"
+    ],
+    "parserOptions": {
+      "ecmaVersion": "latest",
+      "allowImportExportEverywhere": true,
+      "parser": "@eslint/babel-parser",
+      "ecmaFeatures": {
+        "jsx": true,
+        "impliedStrict": true,
+        "modules": true
+      },
+      "sourceType": "module"
+    },
+    "rules": {
+      "react/jsx-filename-extension": [
+        "error",
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ],
+      "react-hooks/rules-of-hooks": "error",
+      "react-hooks/exhaustive-deps": "warn",
+      "jest/no-deprecated-functions": "off"
+    }
+  },
+  "prettier": {
+    "printWidth": 120,
+    "semi": true,
+    "singleQuote": true,
+    "tabwidth": true,
+    "trailingComma": "all"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-git"
+    }
+  }
+}
